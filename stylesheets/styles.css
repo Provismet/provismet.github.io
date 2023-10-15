@@ -6,6 +6,7 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    max-height: 10vh;
 }
 
 .toolbar a {
@@ -16,6 +17,7 @@
     padding: 16px 30px;
     text-align: center;
     text-decoration: none;
+    max-height: 10vh;
 }
 
 .toolbar a:hover {
@@ -33,16 +35,9 @@
 }
 
 .main {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -80%);
     border-radius: 25px;
-    padding: 25px 15px;
-    width: 50vw;
     height: fit-content;
-    margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
     color: #F6F6F6;
     background-color: #26003A;
 }
@@ -62,7 +57,7 @@
 
 .content {
     padding: 25px 15px;
-    width: 50vw;
+    width: 70vw;
     margin: auto;
     text-align: center;
     color: #F6F6F6;
@@ -72,43 +67,50 @@
 
 .contentItem {
     text-align: left;
-    height: 150px;
     width: 100%;
     border-radius: 10px;
     background-color: #26003A;
+    display: flex;
 }
 
 .vDiv {
-    height: 75%;
+    margin-top: 17px;
+    margin-bottom: 17px;
     width: 1px;
-    float: right;
     background-color: #F6F6F6;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
 .contentText {
-    float: left;
-    width: 60%;
+    flex-grow: 1;
 }
 
 .contentIcon {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
     width: 100px;
+    height: 100px;
     padding: 20px;
-    float: left;
 }
 
 .download {
-    position: relative;
+    display: flex;
     padding: 20px;
     text-align: center;
-    float: right;
-    top: 50%;
-    transform: translate(0, -50%);
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    max-width: 120px;
+    min-width: 120px;
+    width: 120px;
+}
+
+.rowBreak {
+    height: 0;
+    flex-basis: 100%;
+}
+
+.githubDownload {
+    flex-basis: 100%;
+    height: 0;
 }
 
 .download img {
