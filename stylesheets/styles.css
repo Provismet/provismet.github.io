@@ -1,0 +1,122 @@
+.toolbar {
+    text-align: center;
+    width: 100%;
+    background-color: #7E0EB4;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.toolbar a {
+    float: left;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F6F6F6;
+    padding: 16px 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.toolbar a:hover {
+    background-color: #4E008E;
+}
+
+.toolbar a.activePage {
+    background-color: #F6F6F6;
+    color: #7E0EB4;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.main {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -80%);
+    border-radius: 25px;
+    padding: 25px 15px;
+    width: 50vw;
+    height: fit-content;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #F6F6F6;
+    background-color: #26003A;
+}
+
+.main a {
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: #B565DB;
+    text-decoration: none;
+    text-align: center;
+    color: #F6F6F6;
+}
+
+.main a:hover {
+    background-color: #8335B5;
+}
+
+.content {
+    padding: 25px 15px;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+    color: #F6F6F6;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contentItem {
+    text-align: left;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #26003A;
+}
+
+.vDiv {
+    height: 75%;
+    width: 1px;
+    float: right;
+    background-color: #F6F6F6;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.contentText {
+    float: left;
+    width: 60%;
+}
+
+.contentIcon {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100px;
+    padding: 20px;
+    float: left;
+}
+
+.download {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    float: right;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.download img {
+    width: 50px;
+}
+
+body {
+    margin: 50px 0;
+    padding: 0;
+    background-color: #603873;
+}
