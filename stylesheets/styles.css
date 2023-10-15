@@ -6,18 +6,27 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    height: fit-content;
     max-height: 10vh;
+}
+
+.toolbar img {
+    float: left;
+    height: 50px;
+    padding: 5px 30px;
+    object-fit: contain;
 }
 
 .toolbar a {
     float: left;
-    font-size: large;
+    font-size: larger;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #F6F6F6;
     padding: 16px 30px;
     text-align: center;
     text-decoration: none;
     max-height: 10vh;
+    height: 28px;
 }
 
 .toolbar a:hover {
@@ -35,24 +44,35 @@
 }
 
 .main {
-    border-radius: 25px;
+    border-radius: 10px;
     height: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #F6F6F6;
     background-color: #26003A;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #F6F6F6;
 }
 
 .main a {
+    font-size: larger;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #F6F6F6;
     border-radius: 10px;
-    padding: 10px 10px;
-    background-color: #B565DB;
+    padding: 10px;
+    background-color: #8335B5;
     text-decoration: none;
     text-align: center;
     color: #F6F6F6;
 }
 
 .main a:hover {
-    background-color: #8335B5;
+    background-color: #4E008E;
+}
+
+.links {
+    padding-bottom: 30px;
 }
 
 .content {
@@ -71,6 +91,9 @@
     border-radius: 10px;
     background-color: #26003A;
     display: flex;
+    border-width: 2px;
+    border-style: groove;
+    border-color: #F6F6F6;
 }
 
 .vDiv {
