@@ -38,6 +38,15 @@
     color: #7E0EB4;
 }
 
+#filter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F6F6F6;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .avatar {
     border-radius: 50%;
     width: 200px;
