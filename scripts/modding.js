@@ -47,23 +47,30 @@ class Mod {
         let githubPage = document.createElement("a");
         githubPage.href = this.github;
         githubPage.innerHTML = GITHUB_LOGO;
-
-        let rowBreak = document.createElement("div");
-        rowBreak.className = "rowBreak";
-
-        let modrinthPage = document.createElement("a");
-        modrinthPage.href = this.modrinth;
-        modrinthPage.innerHTML = MODRINTH_LOGO;
-
-        let curseforgePage = document.createElement("a");
-        curseforgePage.href = this.curseforge;
-        curseforgePage.innerHTML = CURSEFORGE_LOGO;
-
         download.appendChild(githubPage);
-        download.appendChild(rowBreak);
-        download.appendChild(modrinthPage);
-        download.appendChild(document.createTextNode("\u00A0\u00A0"));
-        download.appendChild(curseforgePage);
+
+        if (this.modrinth != null || this.curseforge != null) {
+            let rowBreak = document.createElement("div");
+            rowBreak.className = "rowBreak";
+            download.appendChild(rowBreak);
+        }
+
+        if (this.modrinth != null) {
+            let modrinthPage = document.createElement("a");
+            modrinthPage.href = this.modrinth;
+            modrinthPage.innerHTML = MODRINTH_LOGO;
+            download.appendChild(modrinthPage);
+        }
+
+        if (this.curseforge != null) {
+            if (this.modrinth != null) download.appendChild(document.createTextNode("\u00A0\u00A0"));
+
+            let curseforgePage = document.createElement("a");
+            curseforgePage.href = this.curseforge;
+            curseforgePage.innerHTML = CURSEFORGE_LOGO;
+            download.appendChild(curseforgePage);
+        }
+
         newDiv.appendChild(download);
 
         return newDiv;
@@ -104,7 +111,8 @@ class Series {
 }
 
 const SERIES_OBJ = {
-    "Provi's Projects": new Series("Provi's Projects", "A collection of mods that I've chosen to brand under my name.<br>These are the mods that I consider to be some of my best work; expect them to be complex, large, or simply very impactful.")
+    "Provi's Projects": new Series("Provi's Projects", "A collection of mods that I've chosen to brand under my name.<br>These are the mods that I consider to be some of my best work; expect them to be complex, large, or simply very impactful."),
+    "???": new Series("???", "Hold up, let me cook. Something interesting is coming...")
 };
 
 const MOD_LIST = [
@@ -136,7 +144,7 @@ const MOD_LIST = [
         "https://modrinth.com/mod/extra-damage-enchantments",
         "https://www.curseforge.com/minecraft/mc-mods/extra-damage-enchantments",
         ["compatibility", "content", "game mechanics", "client-server"],
-        null
+        SERIES_OBJ["???"]
     ),
     new Mod(
         "Provi's Origins",
@@ -156,7 +164,7 @@ const MOD_LIST = [
         "https://modrinth.com/mod/dual-swords",
         "https://www.curseforge.com/minecraft/mc-mods/dual-swords",
         ["content", "game mechanics", "client-server"],
-        null
+        SERIES_OBJ["???"]
     ),
     new Mod(
         "Virtual Motion Capture for Minecraft",
@@ -167,6 +175,16 @@ const MOD_LIST = [
         "https://www.curseforge.com/minecraft/mc-mods/vmc-mc",
         ["client-side"],
         null
+    ),
+    new Mod(
+        "Provi's Health Bars",
+        "Adds sleek and expansive health bars to Minecraft. Intended as a spiritual successor to ToroHealth, which is no longer officially maintained.",
+        "assets/ModIcons/ProviHealth.png",
+        "https://github.com/Provismet/ProviHealth",
+        "https://modrinth.com/mod/provis-health-bars",
+        null,
+        ["client-side"],
+        SERIES_OBJ["Provi's Projects"]
     )
 ];
 
