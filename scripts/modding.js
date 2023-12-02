@@ -185,6 +185,16 @@ const MOD_LIST = [
         null,
         ["client-side"],
         SERIES_OBJ["Provi's Projects"]
+    ),
+    new Mod(
+        "Provi's Monumenta Modpack",
+        "An optimised and feature-complete modpack for the Minecraft server <a href=https://playmonumenta.com/>Monumenta</a>.<br>Despite the name, this is not part of the \"Provi's Projects\" series.",
+        "assets/ModIcons/monumenta.png",
+        "https://github.com/Provismet/Monumenta-Modpack",
+        "https://modrinth.com/modpack/provis-monumenta-modpack",
+        null,
+        ["modpack", "client-side", "QoL"],
+        null
     )
 ];
 

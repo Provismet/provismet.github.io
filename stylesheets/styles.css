@@ -116,6 +116,18 @@
     flex-grow: 1;
 }
 
+.contentText a:link {
+    color: #d8d67d;
+}
+
+.contentText a:hover {
+    color: #fffb25;
+}
+
+.contentText a:visited {
+    color: #A28BB2;
+}
+
 .contentIcon {
     width: 100px;
     height: 100px;
