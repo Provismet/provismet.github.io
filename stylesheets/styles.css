@@ -63,7 +63,15 @@
     border-color: #F6F6F6;
 }
 
-.main a {
+.main p {
+    font-size: large;
+}
+
+.links {
+    padding-bottom: 30px;
+}
+
+.links a {
     font-size: larger;
     border-width: 2px;
     border-style: groove;
@@ -76,12 +84,8 @@
     color: #F6F6F6;
 }
 
-.main a:hover {
+.links a:hover {
     background-color: #4E008E;
-}
-
-.links {
-    padding-bottom: 30px;
 }
 
 .content {
