@@ -80,6 +80,33 @@ class Mod {
     }
 }
 
+class Series {
+    constructor (name, description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    getElement () {
+        let div = document.createElement("div");
+        div.className = "seriesDesc";
+
+        let title = document.createElement("h1");
+        title.textContent = this.name;
+
+        let description = document.createElement("p");
+        description.innerHTML = this.description;
+
+        div.appendChild(title);
+        div.appendChild(description);
+
+        return div;
+    }
+}
+
+const SERIES_OBJ = {
+    "Provi's Projects": new Series("Provi's Projects", "A collection of mods that I've chosen to brand under my name.<br>These are the mods that I consider to be some of my best work; expect them to be complex, large, or simply very impactful.")
+};
+
 const MOD_LIST = [
     new Mod(
         "Tooltip Scroll",
@@ -119,7 +146,7 @@ const MOD_LIST = [
         "https://modrinth.com/mod/provis-origins",
         "https://www.curseforge.com/minecraft/mc-mods/provis-origins",
         ["content", "client-server", "game mechanics"],
-        "Provi Projects"
+        SERIES_OBJ["Provi's Projects"]
     ),
     new Mod(
         "Dual Swords",
@@ -141,7 +168,7 @@ const MOD_LIST = [
         ["client-side"],
         null
     )
-]
+];
 
 function renderList () {
     let tag = document.getElementById("tagSelect").value;
@@ -149,9 +176,15 @@ function renderList () {
 
     let series = document.getElementById("seriesSelect").value;
     if (series == "null") series = null;
+    else series = SERIES_OBJ[series];
 
     let contentList = document.getElementById("contentList");
     contentList.innerHTML = "";
+
+    if (series != null) {
+        contentList.appendChild(series.getElement());
+        contentList.appendChild(document.createElement("br"));
+    }
     
     for (let mod of MOD_LIST) {
         if (mod.hasTag(tag) && mod.isSeries(series)) {
@@ -179,14 +212,10 @@ function getAllTags () {
 function getAllSeries () {
     let series = [];
 
-    for (let mod of MOD_LIST) {
-        if (!series.includes(mod.series) && mod.series != null) {
-            series.push(mod.series);
-        }
+    for (let seriesObj in SERIES_OBJ) {
+        series.push(seriesObj);
     }
-    series.sort();
 
-    console.log(series);
     return series;
 }
 

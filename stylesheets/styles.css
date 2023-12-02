@@ -149,6 +149,15 @@
     width: 50px;
 }
 
+.seriesDesc {
+    width: 75%;
+    margin: auto;
+}
+
+.seriesDesc p {
+    font-size: large;
+}
+
 body {
     margin: 50px 0;
     padding: 0;
