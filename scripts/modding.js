@@ -182,7 +182,7 @@ const MOD_LIST = [
         "assets/ModIcons/ProviHealth.png",
         "https://github.com/Provismet/ProviHealth",
         "https://modrinth.com/mod/provis-health-bars",
-        null,
+        "https://www.curseforge.com/minecraft/mc-mods/provihealth",
         ["client-side"],
         SERIES_OBJ["Provi's Projects"]
     ),
