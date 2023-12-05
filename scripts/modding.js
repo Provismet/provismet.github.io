@@ -206,6 +206,10 @@ function renderList () {
     if (series == "null") series = null;
     else series = SERIES_OBJ[series];
 
+    renderListFromParams(tag, series);
+}
+
+function renderListFromParams (tag, series) {
     let contentList = document.getElementById("contentList");
     contentList.innerHTML = "";
 
@@ -220,6 +224,47 @@ function renderList () {
             contentList.appendChild(document.createElement("br"));
         }
     }
+}
+
+function getTagFromURL () {
+    const query = new URLSearchParams(window.location.search);
+    
+    let tag = null;
+    if (query.has("tag")) tag = query.get("tag");
+    if (tag == "null") tag = null;
+
+    return tag;
+}
+
+function getSeriesFromURL () {
+    const query = new URLSearchParams(window.location.search);
+
+    let series = null;
+    if (query.has("series")) series = query.get("series");
+    if (series == "null") series = null;
+    else series = SERIES_OBJ[series];
+
+    return series;
+}
+
+function readURL () {
+    renderListFromParams(getTagFromURL(), getSeriesFromURL());
+}
+
+function setURL () {
+    let tag = document.getElementById("tagSelect").value;
+    let series = document.getElementById("seriesSelect").value;
+
+    const query = new URLSearchParams(window.location.search);
+
+    if (query.has("tag")) query.set("tag", tag);
+    else query.append("tag", tag);
+
+    if (query.has("series")) query.set("series", series);
+    else query.append("series", series);
+
+    window.location.search = query.toString();
+    readURL();
 }
 
 function getAllTags () {
@@ -248,23 +293,27 @@ function getAllSeries () {
 }
 
 function onLoad () {
+    let selectedTag = getTagFromURL();
     let tagSelect = document.getElementById("tagSelect");
     for (let tagName of getAllTags()) {
         let newOption = document.createElement("option");
         newOption.value = tagName;
         newOption.innerHTML = tagName;
+        if (selectedTag == tagName) newOption.selected = true;
 
         tagSelect.appendChild(newOption);
     }
 
+    let selectedSeries = getSeriesFromURL();
     let seriesSelect = document.getElementById("seriesSelect");
     for (let seriesName of getAllSeries()) {
         let newOption = document.createElement("option");
         newOption.value = seriesName;
         newOption.innerHTML = seriesName;
+        if (selectedSeries != null && selectedSeries.name == seriesName) newOption.selected = true;
 
         seriesSelect.appendChild(newOption);
     }
 
-    renderList();
+    readURL();
 }
