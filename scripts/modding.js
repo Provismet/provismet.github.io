@@ -317,14 +317,3 @@ function onLoad () {
 
     readURL();
 }
-
-const embedLink = document.head.getElementsByClassName("url");
-embedLink.content = window.location.href;
-if (getTagFromURL() == null && getSeriesFromURL() != null) {
-    const embedTitle = document.head.getElementsByClassName("title");
-    const embedDesc = document.head.getElementsByClassName("desc");
-
-    const series = getSeriesFromURL();
-    embedTitle.content = series.name;
-    embedDesc.content = series.description;
-}
