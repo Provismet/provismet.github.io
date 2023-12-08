@@ -183,7 +183,7 @@ const MOD_LIST = [
         "https://github.com/Provismet/ProviHealth",
         "https://modrinth.com/mod/provis-health-bars",
         "https://www.curseforge.com/minecraft/mc-mods/provihealth",
-        ["client-side"],
+        ["client-side", "QoL"],
         SERIES_OBJ["Provi's Projects"]
     ),
     new Mod(
