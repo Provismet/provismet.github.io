@@ -3,13 +3,15 @@ const MODRINTH_LOGO = '<img src="assets/modrinth.svg">';
 const CURSEFORGE_LOGO = '<img src="assets/curseforge.svg">';
 
 class Mod {
-    constructor (name, description, icon, github, modrinth, curseforge, tags, series) {
+    constructor (name, description, icon, github, modrinth, curseforge, modrinthID, curseforgeID, tags, series) {
         this.name = name;
         this.description = description;
         this.icon = icon;
         this.github = github;
         this.modrinth = modrinth;
         this.curseforge = curseforge;
+        this.modrinthID = modrinthID;
+        this.curseforgeID = curseforgeID;
         this.tags = tags;
         this.series = series;
     }
@@ -34,6 +36,30 @@ class Mod {
         contentTextDescription.innerHTML = this.description;
 
         contentText.appendChild(contentTextTitle);
+
+        let badgeDiv = document.createElement("div");
+
+        if (this.modrinthID != null) {
+            let modrinthBadge = document.createElement("img");
+            modrinthBadge.className = "downloadBadge";
+            modrinthBadge.alt = "Modrinth Downloads";
+            modrinthBadge.src = "https://img.shields.io/modrinth/dt/" + this.modrinthID + "?style=flat-square&logo=modrinth&labelColor=7E0EB4&color=F6F6F6"
+            badgeDiv.appendChild(modrinthBadge);
+            badgeDiv.appendChild(document.createTextNode("\u00A0\u00A0"));
+        }
+
+        if (this.curseforgeID != null) {
+            let curseforgeBadge = document.createElement("img");
+            curseforgeBadge.className = "downloadBadge";
+            curseforgeBadge.alt = "CurseForge Downloads";
+            curseforgeBadge.src = "https://img.shields.io/curseforge/dt/" + this.curseforgeID + "?style=flat-square&logo=curseforge&labelColor=7E0EB4&color=F6F6F6";
+
+            badgeDiv.appendChild(curseforgeBadge);
+            badgeDiv.appendChild(document.createTextNode("\u00A0\u00A0"));
+        }
+
+        if (this.modrinthID != null || this.curseforgeID != null) contentTextTitle.appendChild(badgeDiv);
+
         contentText.appendChild(contentTextDescription);
         newDiv.appendChild(contentText)
 
@@ -123,6 +149,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/Tooltip-Scroll-Fabric",
         "https://modrinth.com/mod/tooltip-scroll",
         "https://www.curseforge.com/minecraft/mc-mods/tooltip-scroll-fabric",
+        "wySVd6d8",
+        "495546",
         ["QoL", "client-side"],
         null
     ),
@@ -133,6 +161,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/Dynamic-Fullbright",
         "https://modrinth.com/mod/dynamic-fullbright",
         "https://www.curseforge.com/minecraft/mc-mods/dynamic-fullbright",
+        "tF7P4IlX",
+        "867410",
         ["QoL", "client-side"],
         null
     ),
@@ -143,6 +173,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/Extra-Damage-Enchantments",
         "https://modrinth.com/mod/extra-damage-enchantments",
         "https://www.curseforge.com/minecraft/mc-mods/extra-damage-enchantments",
+        "d2UQqqct",
+        "740021",
         ["compatibility", "content", "game mechanics", "client-server"],
         SERIES_OBJ["???"]
     ),
@@ -153,6 +185,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/Provi-Origins",
         "https://modrinth.com/mod/provis-origins",
         "https://www.curseforge.com/minecraft/mc-mods/provis-origins",
+        "uze1qMee",
+        "881653",
         ["content", "client-server", "game mechanics"],
         SERIES_OBJ["Provi's Projects"]
     ),
@@ -163,6 +197,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/Dual-Swords",
         "https://modrinth.com/mod/dual-swords",
         "https://www.curseforge.com/minecraft/mc-mods/dual-swords",
+        "3VQn6Vwv",
+        "893211",
         ["content", "game mechanics", "client-server"],
         SERIES_OBJ["???"]
     ),
@@ -173,6 +209,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/VMC-MC",
         "https://modrinth.com/mod/virtual-motion-capture-for-minecraft",
         "https://www.curseforge.com/minecraft/mc-mods/vmc-mc",
+        "ub8B8TcT",
+        "922189",
         ["client-side"],
         null
     ),
@@ -183,6 +221,8 @@ const MOD_LIST = [
         "https://github.com/Provismet/ProviHealth",
         "https://modrinth.com/mod/provis-health-bars",
         "https://www.curseforge.com/minecraft/mc-mods/provihealth",
+        "4wDQsby8",
+        "945133",
         ["client-side", "QoL"],
         SERIES_OBJ["Provi's Projects"]
     ),
@@ -192,6 +232,8 @@ const MOD_LIST = [
         "assets/ModIcons/monumenta.png",
         "https://github.com/Provismet/Monumenta-Modpack",
         "https://modrinth.com/modpack/provis-monumenta-modpack",
+        null,
+        "uOOyjFmb",
         null,
         ["modpack", "client-side", "QoL"],
         null

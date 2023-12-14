@@ -120,6 +120,10 @@
     flex-grow: 1;
 }
 
+.contentText h2 div {
+    float: right;
+}
+
 .contentText a:link {
     color: #d8d67d;
 }
