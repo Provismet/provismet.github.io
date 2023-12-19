@@ -4,6 +4,7 @@
         <title>Provi</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <script src="scripts/tools.js"></script>
 
         <meta content="Provi the Plant" property="og:title">
         <meta content="Tools made by the plant." property="og:description">
@@ -11,7 +12,7 @@
         <meta content="https://provismet.github.io/assets/embed.png" property="og:image">
         <meta content="#7E0EB4" data-react-helmet="true" name="theme-color">
     </head>
-    <body>
+    <body onload="onLoad()">
         <div class="toolbar">
             <img src="assets/logo.png">
             <a href="./">About</a>
@@ -19,32 +20,8 @@
             <a href="./modding">Minecraft</a>
         </div>
 
-        <div class="content">
-            <div class="contentItem">
-                <img src="assets/ToolIcons/Modpack.png" class="contentIcon">
-                <div class="contentText">
-                    <h2>Modrinth Modpack Installer</h2>
-                    <p>A simple installer that builds a Minecraft profile from a <em>.mrpack</em> file.</p>
-                </div>
-                <div class="vDiv"></div>
-                <div class="download">
-                    <a href="https://github.com/Provismet/Modrinth-Modpack-Installer"><img src="assets/github-mark-white.svg"></a>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="contentItem">
-                <img src="assets/ToolIcons/LilyPanel.png" class="contentIcon">
-                <div class="contentText">
-                    <h2>LilyPanel</h2>
-                    <p>Python GUI for Inochi Session, allowing users to more easily manage their toggles.</p>
-                </div>
-                <div class="vDiv"></div>
-                <div class="download">
-                    <a href="https://github.com/Provismet/LilyPanel"><img src="assets/github-mark-white.svg"></a>
-                </div>
-            </div>
+        <div class="content" id="contentList">
+            <!-- This is filled via JavaScript. -->
         </div>
     </body>
 </html>
