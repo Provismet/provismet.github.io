@@ -138,7 +138,7 @@ class Series {
 
 const SERIES_OBJ = {
     "Provi's Projects": new Series("Provi's Projects", "A collection of mods that I've chosen to brand under my name.<br>These are the mods that I consider to be some of my best work; expect them to be complex, large, or simply very impactful."),
-    "???": new Series("???", "Hold up, let me cook. Something interesting is coming...")
+    "Combat+": new Series("Combat+", "A simple, yet highly effective series of vanilla+ mods. Collectively, they build a new modded ecosystem for combat.<br><br>Combat+ aims to build upon the vanilla combat system, it takes critical note of the game's design and seeks to expand upon it whilst drastically altering how you think about combat as a whole.<br><br>Through the use of the core library, all mods in the series are extremely compatible with each other and even future expansions of the series.<br>View the collection on <a href=\"https://modrinth.com/collection/LxgNym3J\">Modrinth</a>. ")
 };
 
 const MOD_LIST = [
@@ -168,7 +168,7 @@ const MOD_LIST = [
     ),
     new Mod(
         "Extra Damage Enchantments",
-        "Adds 5 additional entity groups and weapon enchantments that deal additional damage to them. This is a family of mods offering extensions to Neat and Origins.",
+        "Both an enchantment mod and a modpack utility tool. It turns the entity group system (used by Smite, etc) into a datapack tag system. It also adds 5 additional entity groups, each with new weapon enchantments that deal additional damage to them.",
         "assets/ModIcons/ExtraDE.png",
         "https://github.com/Provismet/Extra-Damage-Enchantments",
         "https://modrinth.com/mod/extra-damage-enchantments",
@@ -176,7 +176,7 @@ const MOD_LIST = [
         "d2UQqqct",
         "740021",
         ["compatibility", "content", "game mechanics", "client-server"],
-        SERIES_OBJ["???"]
+        SERIES_OBJ["Combat+"]
     ),
     new Mod(
         "Provi's Origins",
@@ -192,7 +192,7 @@ const MOD_LIST = [
     ),
     new Mod(
         "Dual Swords",
-        "Yet another dual wielding mod. This time with a focus on risk-versus-reward parry/riposte gameplay.",
+        "A true vanilla+ dual-wield mod. It focuses on risk-versus-reward gameplay, allowing weapons to have use-actions controlled by enchantments. All dual-wielding weapons grant bonus damage and are eligible for parry/riposte actions or lunges.",
         "assets/ModIcons/DualSwords.png",
         "https://github.com/Provismet/Dual-Swords",
         "https://modrinth.com/mod/dual-swords",
@@ -200,7 +200,7 @@ const MOD_LIST = [
         "3VQn6Vwv",
         "893211",
         ["content", "game mechanics", "client-server"],
-        SERIES_OBJ["???"]
+        SERIES_OBJ["Combat+"]
     ),
     new Mod(
         "Virtual Motion Capture for Minecraft",
@@ -225,6 +225,42 @@ const MOD_LIST = [
         "945133",
         ["client-side", "QoL"],
         SERIES_OBJ["Provi's Projects"]
+    ),
+    new Mod(
+        "Combat+ Core",
+        "The core library for the Combat+ series, providing important hooks and compatibility layers.",
+        "assets/ModIcons/CombatPlus.png",
+        "https://github.com/Provismet/CombatPlus-Core",
+        null,
+        null,
+        null,
+        null,
+        ["client-server", "game mechanics", "compatibility"],
+        SERIES_OBJ["Combat+"]
+    ),
+    new Mod(
+        "Additional Armoury",
+        "Adds new weapons, an enchantment-based magic system, and materials. All with unique properties that fit with and expand the vanilla game.",
+        "assets/ModIcons/AdditionalArmoury.png",
+        "https://github.com/Provismet/Additional-Armoury",
+        null,
+        null,
+        null,
+        null,
+        ["client-server", "content"],
+        SERIES_OBJ["Combat+"]
+    ),
+    new Mod(
+        "Extended Enchanting",
+        "Adds over a dozen new enchantments; offering options that drastically change both combat and out-of-combat gameplay.",
+        "assets/ModIcons/ExtendedEnchanting.png",
+        "https://github.com/Provismet/Extended-Enchanting",
+        null,
+        null,
+        null,
+        null,
+        ["client-server", "content", "game mechanics", "QoL"],
+        SERIES_OBJ["Combat+"]
     ),
     new Mod(
         "Provi's Monumenta Modpack",
