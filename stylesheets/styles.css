@@ -133,13 +133,25 @@
 }
 
 .contentText a:visited {
-    color: #A28BB2;
+    color: #a28bb2;
 }
 
 .contentIcon {
     width: 100px;
     height: 100px;
     padding: 20px;
+}
+
+.seriesDesc a:link {
+    color: #d8d67d;
+}
+
+.seriesDesc a:hover {
+    color: #fffb25;
+}
+
+.seriesDesc a:visited {
+    color: #ada5b3;
 }
 
 .download {
