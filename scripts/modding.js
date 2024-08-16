@@ -263,6 +263,18 @@ const MOD_LIST = [
         SERIES_OBJ["Combat+"]
     ),
     new Mod(
+        "Cursed Spawners",
+        "Adds new mechanics to spawners that make them much more difficult to deal with. Fully customisable with NBT and gamerules.",
+        "assets/ModIcons/CursedSpawners.png",
+        "https://github.com/Provismet/Cursed-Spawners",
+        "https://modrinth.com/mod/cursed-spawners",
+        "https://www.curseforge.com/minecraft/mc-mods/cursed-spawners",
+        "kpbD49Kv",
+        "1083491",
+        ["client-server", "content", "game mechanics"],
+        null
+    ),
+    new Mod(
         "Provi's Monumenta Modpack",
         "An optimised and feature-complete modpack for the Minecraft server <a href=https://playmonumenta.com/>Monumenta</a>.<br>Despite the name, this is not part of the \"Provi's Projects\" series.",
         "assets/ModIcons/monumenta.png",
