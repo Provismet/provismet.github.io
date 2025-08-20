@@ -138,7 +138,8 @@ class Series {
 
 const SERIES_OBJ = {
     "Provi's Projects": new Series("Provi's Projects", "A collection of mods that I've chosen to brand under my name.<br>These are the mods that I consider to be some of my best work; expect them to be complex, large, or simply very impactful."),
-    "Combat+": new Series("Combat+", "A simple, yet highly effective series of vanilla+ mods. Collectively, they build a new modded ecosystem for combat.<br><br>Combat+ aims to build upon the vanilla combat system, it takes critical note of the game's design and seeks to expand upon it whilst drastically altering how you think about combat as a whole.<br><br>Through the use of the core library, all mods in the series are extremely compatible with each other and even future expansions of the series.<br>View the collection on <a href=\"https://modrinth.com/collection/LxgNym3J\">Modrinth</a>. ")
+    "Combat+": new Series("Combat+", "A simple, yet highly effective series of vanilla+ mods. Collectively, they build a new modded ecosystem for combat.<br><br>Combat+ aims to build upon the vanilla combat system, it takes critical note of the game's design and seeks to expand upon it whilst drastically altering how you think about combat as a whole.<br><br>Through the use of the core library, all mods in the series are extremely compatible with each other and even future expansions of the series.<br>View the collection on <a href=\"https://modrinth.com/collection/LxgNym3J\">Modrinth</a>. "),
+    "Cobblemon": new Series("Cobblemon", "A complex series of events led to me making Cobblemon addons...")
 };
 
 const MOD_LIST = [
@@ -273,6 +274,42 @@ const MOD_LIST = [
         "1083491",
         ["client-server", "content", "game mechanics"],
         null
+    ),
+    new Mod(
+        "Cobblemon Battle Logger",
+        "Allows players to save json logs all battles on a compatible server.",
+        "assets/ModIcons/BattleLogger.png",
+        "https://github.com/Provismet/Dystoria-Battle-Logger",
+        "https://modrinth.com/mod/cobblemon-battle-logger",
+        null,
+        "hpf08xql",
+        null,
+        ["QoL", "client-server", "server-side"],
+        SERIES_OBJ["Cobblemon"]
+    ),
+    new Mod(
+        "Dystoria Tweaks",
+        "Adds several client-side QoL improvements for the Dystoria Cobblemon server.",
+        "assets/ModIcons/DystoriaTweaks.png",
+        "https://gitlab.com/DystoriaDev/dystoria-tweaks",
+        "https://modrinth.com/mod/dystoria-tweaks",
+        "https://www.curseforge.com/minecraft/mc-mods/dystoria-tweaks",
+        "3Lv2CuxE",
+        "1276923",
+        ["client-side", "QoL"],
+        SERIES_OBJ["Cobblemon"]
+    ),
+    new Mod(
+        "Gimme That Gimmick",
+        "Implements all generational gimmicks, form changes, and custom items/effects for Cobblemon.",
+        "assets/ModIcons/GimmeThatGimmick.png",
+        "https://github.com/Provismet/Gimme-That-Gimmick",
+        "https://modrinth.com/mod/gimme-that-gimmick",
+        "https://www.curseforge.com/minecraft/mc-mods/gimme-that-gimmick",
+        "GsFuo2CX",
+        "1282018",
+        ["server-side", "content", "game mechanics"],
+        SERIES_OBJ["Cobblemon"]
     ),
     new Mod(
         "Provi's Monumenta Modpack",
