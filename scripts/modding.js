@@ -312,6 +312,18 @@ const MOD_LIST = [
         SERIES_OBJ["Cobblemon"]
     ),
     new Mod(
+        "Daycare+",
+        "A highly customisable serverside breeding mod that aims to rectify the faults of other breeding implementations. Unintrustive, intuitive, and anti-AFK. Has QoL features on the client too.",
+        "assets/ModIcons/DaycarePlus.png",
+        "https://github.com/Provismet/DaycarePlus",
+        "https://modrinth.com/mod/daycareplus",
+        "https://www.curseforge.com/minecraft/mc-mods/daycareplus",
+        "sw1l2uBq",
+        "1342338",
+        ["server-side", "client-server", "game mechanics", "QoL"],
+        SERIES_OBJ["Cobblemon"]
+    ),
+    new Mod(
         "Provi's Monumenta Modpack",
         "An optimised and feature-complete modpack for the Minecraft server <a href=https://playmonumenta.com/>Monumenta</a>.<br>Despite the name, this is not part of the \"Provi's Projects\" series.",
         "assets/ModIcons/monumenta.png",
